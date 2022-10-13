@@ -73,6 +73,6 @@ $
 # example:
 
 # AUTHORS:
-aya aribi <4999@holbertonschool.com>
+aya aribi <4999@holbertonstudent.com>
 
-Abdelmaoula-Talbi <4397@holbertonschool.com>
+Abdelmaoula-Talbi <4397@holbertonstudent.com>
