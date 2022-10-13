@@ -7,6 +7,6 @@ class state
 from models.base_model import BaseModel
 
 
-class User(BaseModel):
+class State(BaseModel):
     """class state"""
     name = ""
