@@ -14,7 +14,7 @@ class FileStorage:
     A class FileStorage that serializes instances to a
     JSON file and deserializes JSON file to instances
     """
-    __file_path = ""
+    __file_path = "file.json"
     __objects = {}
 
 #    def __init__(self):
@@ -25,10 +25,12 @@ class FileStorage:
         FileStorage.__objects.update({f"{obj.__class__.__name__}.{obj.id}": obj})
 
     def save(self):
-        with open(__file_path, mode="a", encoding="utf-8") as my_file:
+        with open(FileStorage.__file_path, mode="a", encoding="utf-8") as my_file:
             json.dump(FileStorage.__objects, my_file)
 
     def reload(self):
-        if os.path.isfile(__file_path):
-            with open(__file_path, encoding='utf-8') as my_file:
+        if os.path.isfile(FileStorage.__file_path):
+            with open(FileStorage.__file_path, encoding='utf-8') as my_file:
                 FileStorage.__objects = json.load(my_file)
+#            FileStorage.new(new_object)
+#        return FileStorage.__objects
