@@ -5,7 +5,7 @@
 	<b><i>AirBnB clone - The console</i></b><br>
 </p>
 <p align="center">
-	<img ="hbnb" src="hbnb"/>
+	<img ="hbnb" src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221013%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221013T160712Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=63d7aa5fa680cf2e6318e11d089fdebe4a23350c90f5ba1ebc016c16e64092ed"/>
 
 </p>
 
@@ -73,6 +73,6 @@ $
 # example:
 
 # AUTHORS:
-aya aribi <4999@holbertonstudent.com>
+aya aribi <4999@holbertonstudents.com>
 
-Abdelmaoula-Talbi <4397@holbertonstudent.com>
+Abdelmaoula-Talbi <4397@holbertonstudents.com>
