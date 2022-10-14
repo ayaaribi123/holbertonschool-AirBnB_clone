@@ -3,10 +3,8 @@
 </h1>
 <p align="center">
 	<b><i>AirBnB clone - The console</i></b><br>
-</p>
-<p align="center">
-	<img == ![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/93769004/195793382-2ef5ee0f-ec49-408e-8df7-e7db29e894a0.png)
-"/>
+	
+![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/93769004/195793382-2ef5ee0f-ec49-408e-8df7-e7db29e894a0.png)
 
 </p>
 
