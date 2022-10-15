@@ -30,12 +30,18 @@ class Test_Class_BaseModel(unittest.TestCase):
         self.assertTrue(type(C.created_at), '<class datetime.datetime>')
         self.assertTrue(type(C.updated_at), '<class datetime.datetime>')
 
+    def testFunction_str(self):
+        D = BaseModel()
+        myStr = print(D)
+
+
+        self.assertNotEqual(myStr, "fake")
+
     def testFunction_save(self):
         b = BaseModel()
         b.save()
-        now_time = datetime.now()
 
-        self.assertEqual(b.updated_at.replace(microsecond=0), now_time.replace(microsecond=0))
+        self.assertEqual(b.updated_at.replace(microsecond=0), datetime.now().replace(microsecond=0))
 
     def testFunction_to_dict(self):
         c = BaseModel()
