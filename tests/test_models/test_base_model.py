@@ -39,9 +39,12 @@ class Test_Class_BaseModel(unittest.TestCase):
 
     def testFunction_save(self):
         b = BaseModel()
+        before_save = b.updated_at
         b.save()
+        after_save = b.updated_at
 
         self.assertEqual(b.updated_at.replace(microsecond=0), datetime.now().replace(microsecond=0))
+        self.assertNotEqual(before_save, after_save)
 
     def testFunction_to_dict(self):
         c = BaseModel()
