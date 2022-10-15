@@ -32,10 +32,10 @@ class Test_Class_BaseModel(unittest.TestCase):
 
     def testFunction_str(self):
         D = BaseModel()
-        myStr = print(D)
+        myStr = str(D)
 
 
-        self.assertNotEqual(myStr, "fake")
+        self.assertEqual(myStr, f"[{D.__class__.__name__}] ({D.id}) {D.__dict__}")
 
     def testFunction_save(self):
         b = BaseModel()
