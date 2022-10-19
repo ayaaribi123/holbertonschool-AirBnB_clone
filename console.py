@@ -110,7 +110,7 @@ class HBNBCommand(cmd.Cmd):
                     print("** value missing **")
                 else:
                     my_obj = objects[f"{args[0]}.{args[1]}"]
-                    for k, v in my_obj.__dict__:
+                    for k, v in list(my_obj.__dict__.items()):
                         my_obj.__dict__[args[2]] = args[3]
                     storage.save()
 
