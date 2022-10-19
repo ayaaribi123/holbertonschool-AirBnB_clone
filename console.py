@@ -24,7 +24,8 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb)'
     file = None
-    all_classes = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+    all_classes = ["BaseModel", "User", "State",
+                   "City", "Amenity", "Place", "Review"]
 
     def emptyline(self):
         pass
@@ -54,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
             new_obj = eval(f"{args[0]}()")
             new_obj.save()
             print(f"{new_obj.id}")
-        
+
     def do_show(self, arg):
         args = arg.split()
         if len(args) == 0:
@@ -97,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
             objects = storage.all()
             for k in objects.keys():
                 print(objects[k])
-    
+
     def do_update(self, arg):
         args = arg.split()
         if len(args) == 0:
@@ -121,7 +122,6 @@ class HBNBCommand(cmd.Cmd):
                     for k, v in list(my_obj.__dict__.items()):
                         my_obj.__dict__[args[2]] = args[3]
                     storage.save()
-
 
 
 if __name__ == '__main__':
