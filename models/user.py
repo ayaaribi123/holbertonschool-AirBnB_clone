@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """
 
-class user
+A module that representes the class User
+
 """
 
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-	"""class user"""
+	"""class User that is a subclass of BaseModel class"""
 	email = ""
 	password = ""
 	first_name = ""
-	last_name =	""
+	last_name = ""
