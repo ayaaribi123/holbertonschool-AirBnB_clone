@@ -8,6 +8,7 @@ A module that representes the class FileStorage
 from json import dumps, loads
 from os.path import exists
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -19,7 +20,6 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
-#    def __init__(self):
     def all(self):
         return self.__objects
 
