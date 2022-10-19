@@ -7,6 +7,7 @@ This module representes the program called console
 
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 from models.engine.file_storage import FileStorage
 
@@ -18,6 +19,7 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb)'
     file = None
+    all_classes = ["BaseModel", "User"]
 
     def emptyline(self):
         pass
@@ -41,7 +43,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.all_classes:
             print("** class doesn't exist **")
         else:
             new_obj = eval(f"{args[0]}()")
@@ -52,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.all_classes:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
@@ -68,7 +70,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.all_classes:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
@@ -83,7 +85,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         args = arg.split()
-        if len(args) > 0 and args[0] != "BaseModel":
+        if len(args) > 0 and args[0] not in self.all_classes:
             print("** class doesn't exist **")
         else:
             storage.reload()
@@ -95,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.all_classes:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
