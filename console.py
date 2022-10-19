@@ -24,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb)'
     file = None
-    all_classes = ["BaseModel", "User"]
+    all_classes = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
 
     def emptyline(self):
         pass
