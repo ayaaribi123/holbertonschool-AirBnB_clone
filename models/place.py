@@ -7,7 +7,7 @@ class place
 from models.base_model import BaseModel
 
 
-class Palce(BaseModel):
+class Place(BaseModel):
     """class place"""
     city_id = ""
     user_id = ""
