@@ -83,12 +83,13 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         args = arg.split()
-        if ((len(args)) > 0 and (args[0] != "BaseModel")):
+        if len(args) > 0 and args[0] != "BaseModel":
             print("** class doesn't exist **")
-        storage.reload()
-        objects = storage.all()
-        for k in objects.keys():
-            print(objects[k])
+        else:
+            storage.reload()
+            objects = storage.all()
+            for k in objects.keys():
+                print(objects[k])
     
     def do_update(self, arg):
         args = arg.split()
