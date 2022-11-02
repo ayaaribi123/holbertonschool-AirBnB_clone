@@ -2,8 +2,7 @@ header {
 	color: white;
 	height: 70px;
 	width: 100%;
-	border-bottom: 1px #CCCCCC;
-	background:url("/web_static/images/logo.png");
+	border-bottom: solid 1px #CCCCCC;
+	background-image: url(/images/logo.png);
 	background-repeat: no-repeat;
-	margin-left: 20px;
 }
